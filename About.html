@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Maryam Tahir</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f8fafc, #eef2ff);
+    }
+    .fade-in-up {
+      animation: fadeInUp 1s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .underline-animated::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      margin-top: 8px;
+      background: #8b5cf6;
+      transition: width 0.4s ease;
+    }
+    .underline-animated:hover::after {
+      width: 100px;
+    }
+  </style>
+</head>
+<body class="text-gray-800 flex flex-col min-h-screen">
+
+   <!-- Navbar -->
+  <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
+        <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
+      </div>
+      <div class="space-x-5 text-base font-medium nav-links">
+        <a href="index.html" class="text-white hover:text-white">Home</a>
+        <a href="about.html" class="text-white hover:text-white">About</a>
+        <a href="project.html" class="text-white hover:text-white">Projects</a>
+        <a href="story.html" class="text-white hover:text-white">Story</a>
+        <a href="contact.html" class="text-white hover:text-white">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="py-20 px-6 text-center fade-in-up">
+    <h2 class="text-5xl font-extrabold text-gray-900 mb-4 underline-animated">
+      👩‍💻 About <span class="text-purple-700">ME</span>
+    </h2>
+    <p class="text-lg text-gray-600 max-w-xl mx-auto">
+      A passionate full-stack developer blending logic with creativity to build exceptional digital experiences.
+    </p>
+  </section>
+
+  <!-- Bio & Mission -->
+   
+  <section class="max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center gap-12 fade-in-up">
+    <img src="mypic.jpg" alt="Maryam Tahir" class="w-64 h-64 object-cover rounded-full border-4 border-purple-300 shadow-xl hover:scale-105 transition duration-500"/>
+
+    <div class="text-left max-w-2xl">
+      <h3 class="text-3xl font-bold text-purple-700 mb-3">A Glimpse Into My World</h3>
+      <p class="text-lg mb-4 text-gray-700">
+        With a strong foundation in computer science, I channel my curiosity into crafting intuitive and delightful user experiences. My mission is to create elegant, human-focused solutions that merge logic and creativity.
+      </p>
+      <p class="text-lg text-gray-600">
+        Whether working on cutting-edge chatbots, AI tools, or web platforms, I bring empathy and purpose to every line of code.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section class="bg-blue-100 py-14 px-6 fade-in-up">
+    <h2 class="text-3xl font-bold text-center text-purple-700 mb-10">💻 Technologies I Use</h2>
+    <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-10 text-center">
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:html-5"></span>
+        <p class="text-sm">HTML5</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:css-3"></span>
+        <p class="text-sm">CSS3</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:javascript"></span>
+        <p class="text-sm">JavaScript</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:tailwindcss-icon"></span>
+        <p class="text-sm">Tailwind CSS</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:nodejs-icon"></span>
+        <p class="text-sm">Node.js</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:mongodb-icon"></span>
+        <p class="text-sm">MongoDB</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:mysql"></span>
+        <p class="text-sm">SQL</p>
+      </div>
+
+      <div class="flex flex-col items-center space-y-2 transition transform hover:scale-110 duration-300">
+        <span class="iconify text-4xl" data-icon="logos:github-icon"></span>
+        <p class="text-sm">GitHub</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section class="py-16 px-6 bg-gradient-to-r from-purple-100 via-purple-200 to-purple-100 fade-in-up">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-4xl font-bold text-purple-700">10+</h4>
+        <p class="mt-2 text-gray-600">Projects Completed</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-4xl font-bold text-purple-700">1000+</h4>
+        <p class="mt-2 text-gray-600">Lines of Code</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-4xl font-bold text-purple-700">5+</h4>
+        <p class="mt-2 text-gray-600">Core Tools Mastered</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300">
+        <h4 class="text-4xl font-bold text-purple-700">∞</h4>
+        <p class="mt-2 text-gray-600">Curiosity & Creativity</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-12 text-center fade-in-up">
+    <h4 class="text-2xl font-semibold text-purple-700 mb-4">Curious to know more?</h4>
+    <a href="story.html" class="bg-purple-600 hover:bg-purple-800 text-white px-6 py-3 rounded-full text-lg shadow-md transition duration-300">
+      ✨ Explore My Story
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full bg-gradient-to-r from-purple-700 to-pink-500 text-center py-6">
+    <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
+

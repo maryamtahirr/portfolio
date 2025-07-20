@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Projects - Maryam Tahir</title>
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Heroicons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .animate-fade-in {
+        animation: fadeIn 1.2s ease-in-out;
+      }
+      .animate-up {
+        transform: translateY(40px);
+        opacity: 0;
+        animation: slideUp 0.8s ease forwards;
+      }
+      @keyframes slideUp {
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .glow-hover:hover {
+        background-image: linear-gradient(to right, #d8b4fe, #fbcfe8);
+        box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-purple-100 via-pink-100 to-white text-gray-800 min-h-screen flex flex-col animate-fade-in">
+
+     <!-- Navbar -->
+  <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
+        <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
+      </div>
+      <div class="space-x-5 text-base font-medium nav-links">
+        <a href="index.html" class="text-white hover:text-white">Home</a>
+        <a href="about.html" class="text-white hover:text-white">About</a>
+        <a href="project.html" class="text-white hover:text-white">Projects</a>
+        <a href="story.html" class="text-white hover:text-white">Story</a>
+        <a href="contact.html" class="text-white hover:text-white">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+    <!-- Projects Section -->
+    <main class="container mx-auto px-6 py-12 flex-grow">
+      <h2 class="text-4xl font-bold text-center text-purple-700 mb-12 animate-up">🚀 My Projects</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Project 1 -->
+        <a href="https://github.com/maryamtahirr/stock-inventory-system" target="_blank" rel="noopener" class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover animate-up">
+          <h3 class="text-xl font-semibold mb-2">📦 Inventory Management System</h3>
+          <p class="text-gray-600">A stock & inventory system with QR scanning, alerts, reporting, and modern Guna UI2 interface.</p>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="https://github.com/maryamtahirr/todo-list-app" target="_blank" rel="noopener" class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover animate-up delay-100">
+          <h3 class="text-xl font-semibold mb-2">📝 To-Do List Website</h3>
+          <p class="text-gray-600">A beautiful task manager with login, reminders, categories, and dark mode built in React & Firebase.</p>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="https://github.com/maryamtahirr/ai-agent-chatbot" target="_blank" rel="noopener" class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover animate-up delay-200">
+          <h3 class="text-xl font-semibold mb-2">🤖 AI Agent & Chatbot</h3>
+          <p class="text-gray-600">Smart chatbot using n8n, WhatsApp API, NLP, and OpenAI for human-like conversations and automations.</p>
+        </a>
+      </div>
+
+      <!-- Additional Project Suggestion -->
+      <div class="text-center mt-12">
+        <a href="https://github.com/maryamtahirr" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 transform hover:scale-105">✨ View More on GitHub</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+  <footer class="w-full bg-gradient-to-r from-purple-700 to-pink-500 text-center py-6">
+    <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
+  </footer>
+
+
+    <script>
+      feather.replace(); // Load feather icons if needed
+    </script>
+  </body>
+</html>
