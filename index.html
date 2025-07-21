@@ -26,7 +26,6 @@
       animation: float 3s ease-in-out infinite;
     }
 
-    /* Custom Button Glow */
     .glow-on-hover:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px rgba(106, 90, 205, 0.6), 0 0 25px rgba(30, 144, 255, 0.4);
@@ -36,30 +35,41 @@
 
 <body class="bg-gradient-to-br from-purple-100 to-blue-50 text-gray-800 min-h-screen flex flex-col overflow-x-hidden">
 
-   <!-- Navbar -->
+  <!-- Navbar -->
   <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
       <div class="flex items-center space-x-3">
         <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
         <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
       </div>
-      <div class="space-x-5 text-base font-medium nav-links">
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex space-x-5 text-base font-medium mt-4 md:mt-0">
         <a href="index.html" class="text-white hover:text-white">Home</a>
         <a href="about.html" class="text-white hover:text-white">About</a>
         <a href="project.html" class="text-white hover:text-white">Projects</a>
         <a href="story.html" class="text-white hover:text-white">Story</a>
         <a href="contact.html" class="text-white hover:text-white">Contact</a>
       </div>
+
+      <!-- Mobile Nav -->
+      <div class="md:hidden flex flex-col items-end space-y-1 mt-3 text-white text-sm">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="project.html" class="hover:text-white">Projects</a>
+        <a href="story.html" class="hover:text-white">Story</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
     </nav>
   </header>
-  
+
   <!-- Hero Section -->
-  <section class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between flex-grow">
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-16 flex flex-col md:flex-row items-center justify-between flex-grow gap-10">
     <div class="text-center md:text-left space-y-6" data-aos="fade-up" data-aos-delay="200">
-      <h1 class="text-5xl font-extrabold text-purple-800 leading-tight">
-        Hi, I'm <span class="text-blue-600 ">Maryam Tahir</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-purple-800 leading-tight">
+        Hi, I'm <span class="text-blue-600">Maryam Tahir</span>
       </h1>
-      <p class="text-lg text-gray-700 max-w-xl" data-aos="fade-up" data-aos-delay="400">
+      <p class="text-base sm:text-lg text-gray-700 max-w-xl mx-auto md:mx-0" data-aos="fade-up" data-aos-delay="400">
         Aspiring AI Agent Developer — turning creative ideas into intelligent systems using Chatbots, NLP, and more.
       </p>
       <a href="story.html"
@@ -78,57 +88,55 @@
 
     <!-- Profile Image -->
     <div class="mt-10 md:mt-0 float-animate" data-aos="zoom-in" data-aos-delay="1000">
-      <img src="mypic.jpg" alt="Maryam Tahir" class="w-72 h-72 rounded-full border-4 border-purple-400 shadow-xl hover:scale-105 transition-transform duration-500"/>
+      <img src="mypic.jpg" alt="Maryam Tahir" class="w-48 sm:w-60 md:w-72 rounded-full border-4 border-purple-400 shadow-xl hover:scale-105 transition-transform duration-500"/>
     </div>
   </section>
+
   <!-- AI Concepts Section -->
-<section class="bg-white py-20 px-6" data-aos="fade-up">
-  <div class="max-w-7xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-bold text-purple-800 mb-4">What is Artificial Intelligence?</h2>
-    <p class="text-gray-700 text-lg max-w-3xl mx-auto">
-      Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems. AI is revolutionizing the world — from intelligent chatbots to self-driving cars.
-    </p>
-  </div>
-
-  <!-- AI Cards Grid -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-    
-    <!-- Card 1: Chatbots -->
-    <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712003.png" alt="Chatbots" class="w-20 mx-auto mb-4 animate-bounce">
-      <h3 class="text-xl font-semibold text-purple-800 mb-2">Chatbots</h3>
-      <p class="text-gray-600 text-sm">Smart assistants that understand and respond to users using AI and NLP technologies.</p>
+  <section class="bg-white py-20 px-6" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto text-center mb-12">
+      <h2 class="text-4xl font-bold text-purple-800 mb-4">What is Artificial Intelligence?</h2>
+      <p class="text-gray-700 text-lg max-w-3xl mx-auto">
+        Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think, learn, and solve problems. AI is revolutionizing the world — from intelligent chatbots to self-driving cars.
+      </p>
     </div>
 
-    <!-- Card 2: Natural Language Processing -->
-    <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
-      <img src="https://cdn-icons-png.flaticon.com/512/3817/3817046.png" alt="NLP" class="w-20 mx-auto mb-4 animate-bounce">
-      <h3 class="text-xl font-semibold text-purple-800 mb-2">NLP</h3>
-      <p class="text-gray-600 text-sm">AI helps machines understand, interpret, and generate human language like text and speech.</p>
+    <!-- AI Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712003.png" alt="Chatbots" class="w-20 mx-auto mb-4 animate-bounce">
+        <h3 class="text-xl font-semibold text-purple-800 mb-2">Chatbots</h3>
+        <p class="text-gray-600 text-sm">Smart assistants that understand and respond to users using AI and NLP technologies.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://cdn-icons-png.flaticon.com/512/3817/3817046.png" alt="NLP" class="w-20 mx-auto mb-4 animate-bounce">
+        <h3 class="text-xl font-semibold text-purple-800 mb-2">NLP</h3>
+        <p class="text-gray-600 text-sm">AI helps machines understand, interpret, and generate human language like text and speech.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://cdn-icons-png.flaticon.com/512/4087/4087601.png" alt="ML" class="w-20 mx-auto mb-4 animate-bounce">
+        <h3 class="text-xl font-semibold text-purple-800 mb-2">Machine Learning</h3>
+        <p class="text-gray-600 text-sm">ML is a method of teaching computers to learn from data without being explicitly programmed.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
+        <img src="https://cdn-icons-png.flaticon.com/512/4712/4712051.png" alt="Deep Learning" class="w-20 mx-auto mb-4 animate-bounce">
+        <h3 class="text-xl font-semibold text-purple-800 mb-2">Deep Learning</h3>
+        <p class="text-gray-600 text-sm">A subset of ML using neural networks to mimic the way humans gain knowledge.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Card 3: Machine Learning -->
-    <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="300">
-      <img src="https://cdn-icons-png.flaticon.com/512/4087/4087601.png" alt="ML" class="w-20 mx-auto mb-4 animate-bounce">
-      <h3 class="text-xl font-semibold text-purple-800 mb-2">Machine Learning</h3>
-      <p class="text-gray-600 text-sm">ML is a method of teaching computers to learn from data without being explicitly programmed.</p>
-    </div>
-
-    <!-- Card 4: Deep Learning -->
-    <div class="bg-gradient-to-br from-purple-100 to-blue-100 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300" data-aos="zoom-in" data-aos-delay="400">
-      <img src="https://cdn-icons-png.flaticon.com/512/4712/4712051.png" alt="Deep Learning" class="w-20 mx-auto mb-4 animate-bounce">
-      <h3 class="text-xl font-semibold text-purple-800 mb-2">Deep Learning</h3>
-      <p class="text-gray-600 text-sm">A subset of ML using neural networks to mimic the way humans gain knowledge.</p>
-    </div>
-  </div>
-</section>
-
-
- <!-- Footer -->
+  <!-- Footer -->
   <footer class="w-full bg-gradient-to-r from-purple-700 to-pink-500 text-center py-6">
     <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
   </footer>
-
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

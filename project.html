@@ -1,104 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Projects - Maryam Tahir</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Maryam Tahir</title>
 
-    <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    <!-- Heroicons -->
-    <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
 
-    <style>
-      body {
-        font-family: 'Poppins', sans-serif;
-      }
-      .animate-fade-in {
-        animation: fadeIn 1.2s ease-in-out;
-      }
-      .animate-up {
-        transform: translateY(40px);
-        opacity: 0;
-        animation: slideUp 0.8s ease forwards;
-      }
-      @keyframes slideUp {
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-      .glow-hover:hover {
-        background-image: linear-gradient(to right, #d8b4fe, #fbcfe8);
-        box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
-      }
-    </style>
-  </head>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
 
-  <body class="bg-gradient-to-br from-purple-100 via-pink-100 to-white text-gray-800 min-h-screen flex flex-col animate-fade-in">
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
 
-     <!-- Navbar -->
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .glow-hover:hover {
+      background-image: linear-gradient(to right, #d8b4fe, #fbcfe8);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+    }
+
+    .nav-links a {
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: 0.3s ease-in-out;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-100 to-white text-gray-800 min-h-screen flex flex-col animate-fade-in">
+
+  <!-- Navbar -->
   <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
       <div class="flex items-center space-x-3">
         <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
         <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
       </div>
-      <div class="space-x-5 text-base font-medium nav-links">
-        <a href="index.html" class="text-white hover:text-white">Home</a>
-        <a href="about.html" class="text-white hover:text-white">About</a>
-        <a href="project.html" class="text-white hover:text-white">Projects</a>
-        <a href="story.html" class="text-white hover:text-white">Story</a>
-        <a href="contact.html" class="text-white hover:text-white">Contact</a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-5 text-base font-medium mt-4 md:mt-0 nav-links">
+        <a href="index.html" class="text-white">Home</a>
+        <a href="about.html" class="text-white">About</a>
+        <a href="project.html" class="text-white">Projects</a>
+        <a href="story.html" class="text-white">Story</a>
+        <a href="contact.html" class="text-white">Contact</a>
+      </div>
+
+      <!-- Mobile Links -->
+      <div class="md:hidden flex flex-col items-end space-y-1 mt-3 text-sm nav-links">
+        <a href="index.html" class="text-white">Home</a>
+        <a href="about.html" class="text-white">About</a>
+        <a href="project.html" class="text-white">Projects</a>
+        <a href="story.html" class="text-white">Story</a>
+        <a href="contact.html" class="text-white">Contact</a>
       </div>
     </nav>
   </header>
 
-    <!-- Projects Section -->
-    <main class="container mx-auto px-6 py-12 flex-grow">
-      <h2 class="text-4xl font-bold text-center text-purple-700 mb-12 animate-up">🚀 My Projects</h2>
+  <!-- Projects Section -->
+  <main class="container mx-auto px-6 py-12 flex-grow">
+    <h2 class="text-4xl font-extrabold text-center text-purple-700 mb-12">🚀 My Projects</h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Project 1 -->
-        <a href="https://github.com/maryamtahirr/stock-inventory-system" target="_blank" rel="noopener" class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover animate-up">
-          <h3 class="text-xl font-semibold mb-2">📦Stock & Inventory Management System</h3>
-          <p class="text-gray-600">A C# WinForms application with real-time stock tracking, role-based login, QR code scanning and a modern Guna UI2 Interface</p>
-        </a>
+      <!-- Project 1 -->
+      <a href="https://github.com/maryamtahirr/stock-inventory-system" target="_blank" rel="noopener"
+         class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover">
+        <h3 class="text-xl font-semibold mb-2">📦 Stock & Inventory Management</h3>
+        <p class="text-gray-600 text-sm">C# WinForms app with role-based login, QR scanning, and modern Guna UI2 interface.</p>
+      </a>
 
-        <!-- Project 2 -->
-        <a href="https://github.com/maryamtahirr/todo-list-app" target="_blank" rel="noopener" class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover animate-up delay-100">
-          <h3 class="text-xl font-semibold mb-2">📝 To-Do List Website</h3>
-          <p class="text-gray-600">A beautiful task manager with login, reminders, categories, completed tasks and dark mode built in React & Firebase.</p>
-        </a>
+      <!-- Project 2 -->
+      <a href="https://github.com/maryamtahirr/todo-list-app" target="_blank" rel="noopener"
+         class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover">
+        <h3 class="text-xl font-semibold mb-2">📝 To-Do List Web App</h3>
+        <p class="text-gray-600 text-sm">Task manager with login, reminders, categories, and dark mode using React & Firebase.</p>
+      </a>
 
-        <!-- Project 3 -->
-        <a href="https://github.com/maryamtahirr/ai-agent-chatbot" target="_blank" rel="noopener" class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover animate-up delay-200">
-          <h3 class="text-xl font-semibold mb-2">🤖 AI Agent & Chatbot</h3>
-          <p class="text-gray-600">Smart chatbot using n8n, WhatsApp API, NLP, and OpenAI for human-like conversations and automations.</p>
-        </a>
-      </div>
+      <!-- Project 3 -->
+      <a href="https://github.com/maryamtahirr/ai-agent-chatbot" target="_blank" rel="noopener"
+         class="block bg-white shadow-xl rounded-2xl p-6 transition-transform transform hover:scale-105 hover:shadow-2xl glow-hover">
+        <h3 class="text-xl font-semibold mb-2">🤖 AI Agent Chatbot</h3>
+        <p class="text-gray-600 text-sm">Chatbot powered by n8n, WhatsApp API, OpenAI, and NLP for human-like conversation.</p>
+      </a>
+    </div>
 
-      <!-- Additional Project Suggestion -->
-      <div class="text-center mt-12">
-        <a href="https://github.com/maryamtahirr" target="_blank" rel="noopener" class="inline-block bg-gradient-to-r from-blue-600 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 transform hover:scale-105">✨ View More on GitHub</a>
-      </div>
-    </main>
+    <!-- View More -->
+    <div class="text-center mt-12">
+      <a href="https://github.com/maryamtahirr" target="_blank" rel="noopener"
+         class="inline-block bg-gradient-to-r from-blue-600 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+        ✨ View More on GitHub
+      </a>
+    </div>
+  </main>
 
-    <!-- Footer -->
+  <!-- Footer -->
   <footer class="w-full bg-gradient-to-r from-purple-700 to-pink-500 text-center py-6">
     <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
   </footer>
 
-
-    <script>
-      feather.replace(); // Load feather icons if needed
-    </script>
-  </body>
+  <script>feather.replace();</script>
+</body>
 </html>
