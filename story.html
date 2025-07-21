@@ -35,14 +35,18 @@
     }
 
     .highlight {
-      background: linear-gradient(to right, #a78bfa, #6366f1);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #8b5cf6;
+      font-weight: 600;
+      background-color: #f3e8ff;
+      padding: 2px 6px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(139, 92, 246, 0.2);
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .glow {
-      text-shadow: 0 0 8px #a78bfa, 0 0 16px #6366f1;
+    .highlight:hover {
+      background-color: #ddd6fe;
+      color: #6d28d9;
     }
   </style>
 </head>
@@ -56,13 +60,7 @@
         <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
         <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
       </div>
-
-      <!-- Hamburger Button -->
-      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-        &#9776;
-      </button>
-
-      <!-- Desktop Links -->
+      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">&#9776;</button>
       <div class="hidden md:flex space-x-5 text-base font-medium nav-links text-white">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -72,7 +70,7 @@
       </div>
     </nav>
 
-    <!-- Mobile Dropdown -->
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col text-white text-sm space-y-2 bg-purple-600 nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -83,17 +81,18 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-10 p-6 md:p-16 bg-gradient-to-r from-purple-100 to-indigo-100" data-aos="fade-up">
+  <section class="flex flex-col md:flex-row items-center justify-center gap-10 p-6 md:p-16 bg-gradient-to-r from-purple-100 to-indigo-100" data-aos="fade-up">
     <img src="mypic.jpg" alt="Maryam Tahir" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-indigo-500 shadow-xl hover:scale-105 transition duration-300"/>
-    <div class="max-w-2xl" data-aos="fade-left" data-aos-delay="200">
+    <div class="max-w-2xl text-center md:text-left" data-aos="fade-left" data-aos-delay="200">
       <div class="typewriter text-3xl md:text-4xl font-bold text-indigo-700 mb-3">
         <h1>🌟 Maryam Tahir – My Journey</h1>
-      <div class="px-4 sm:px-6 md:px-10 py-4">
-  <p class="text-gray-700 text-base md:text-lg leading-relaxed max-w-prose mx-auto text-justify">
-    Hello! I'm <span class="highlight font-semibold">Maryam Tahir</span>, born on March 22, 2005, in the vibrant city of Faisalabad, Pakistan. My childhood was nothing short of magical, filled with warmth, nature, and beautiful memories shared with my family.
-  </p>
-</div>
-
+      </div>
+      <div class="mt-4 px-4 sm:px-6 md:px-0">
+        <p class="text-gray-700 text-base sm:text-lg leading-relaxed text-justify">
+          Hello! I'm <span class="highlight">Maryam Tahir</span>, born on March 22, 2005, in the vibrant city of Faisalabad, Pakistan. My childhood was nothing short of magical, filled with warmth, nature, and beautiful memories shared with my family.
+        </p>
+      </div>
+    </div>
   </section>
 
   <!-- Story Content -->
