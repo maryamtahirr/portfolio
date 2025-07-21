@@ -7,11 +7,7 @@
 
   <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <style>
@@ -41,6 +37,7 @@
     .highlight {
       background: linear-gradient(to right, #a78bfa, #6366f1);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
@@ -54,19 +51,35 @@
 
   <!-- Navbar -->
   <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
-      <div class="flex items-center space-x-3 mb-2 sm:mb-0">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
         <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
         <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
       </div>
-      <div class="flex flex-wrap justify-center sm:justify-end gap-3 text-sm sm:text-base font-medium nav-links">
-        <a href="index.html" class="text-white hover:underline">Home</a>
-        <a href="about.html" class="text-white hover:underline">About</a>
-        <a href="project.html" class="text-white hover:underline">Projects</a>
-        <a href="story.html" class="text-white hover:underline">Story</a>
-        <a href="contact.html" class="text-white hover:underline">Contact</a>
+
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+        &#9776;
+      </button>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-5 text-base font-medium nav-links text-white">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="story.html">Story</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col text-white text-sm space-y-2 bg-purple-600 nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="story.html">Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </header>
 
   <!-- Hero Section -->
@@ -84,7 +97,6 @@
 
   <!-- Story Content -->
   <main class="max-w-5xl mx-auto px-4 md:px-6 py-10 md:py-12 space-y-8 text-base md:text-lg leading-relaxed text-gray-700">
-
     <p data-aos="fade-up">One of the most cherished chapters of my early life was living on the campus of National Textile University (NTU)...</p>
     <p data-aos="fade-up" data-aos-delay="100">I vividly remember my daily adventures through the university’s lush green fields...</p>
     <p data-aos="fade-up" data-aos-delay="200">I used to collect flowers, arrange them into handmade bouquets...</p>
@@ -105,12 +117,8 @@
 
     <div data-aos="fade-left">
       <h2 class="text-xl md:text-2xl font-semibold text-indigo-600">🌟 A New Passion – Artificial Intelligence</h2>
-      <p>
-        Although I didn’t clear the MDCAT, I never lost hope. I believe everything happens by the will and perfect plan of Allah (Alhamdulillah)...
-      </p>
-      <p>
-        Today, I’m pursuing a Bachelor’s degree in AI at NTU—my childhood dream place, now my present reality.
-      </p>
+      <p>Although I didn’t clear the MDCAT, I never lost hope. I believe everything happens by the will and perfect plan of Allah (Alhamdulillah)...</p>
+      <p>Today, I’m pursuing a Bachelor’s degree in AI at NTU—my childhood dream place, now my present reality.</p>
     </div>
 
     <div data-aos="fade-up">
@@ -136,13 +144,16 @@
     <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
   </footer>
 
-  <!-- AOS Script -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      once: true,
-      duration: 1000,
-      easing: 'ease-in-out'
+    AOS.init({ once: true, duration: 1000, easing: 'ease-in-out' });
+
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
     });
   </script>
 </body>

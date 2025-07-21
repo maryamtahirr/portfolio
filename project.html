@@ -43,7 +43,7 @@
       width: 0;
       height: 2px;
       background-color: #fff;
-      transition: 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
     }
 
     .nav-links a:hover::after {
@@ -55,30 +55,35 @@
 
   <!-- Navbar -->
   <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
         <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
       </div>
 
-      <!-- Desktop Links -->
-      <div class="hidden md:flex space-x-5 text-base font-medium mt-4 md:mt-0 nav-links">
-        <a href="index.html" class="text-white">Home</a>
-        <a href="about.html" class="text-white">About</a>
-        <a href="project.html" class="text-white">Projects</a>
-        <a href="story.html" class="text-white">Story</a>
-        <a href="contact.html" class="text-white">Contact</a>
-      </div>
+      <!-- Hamburger Button (Feather icon) -->
+      <button id="menu-toggle" aria-label="Toggle Menu" class="md:hidden text-white text-2xl focus:outline-none">
+        <i data-feather="menu"></i>
+      </button>
 
-      <!-- Mobile Links -->
-      <div class="md:hidden flex flex-col items-end space-y-1 mt-3 text-sm nav-links">
-        <a href="index.html" class="text-white">Home</a>
-        <a href="about.html" class="text-white">About</a>
-        <a href="project.html" class="text-white">Projects</a>
-        <a href="story.html" class="text-white">Story</a>
-        <a href="contact.html" class="text-white">Contact</a>
+      <!-- Desktop Links -->
+      <div class="hidden md:flex space-x-5 text-base font-medium nav-links text-white">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="story.html">Story</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col text-white text-sm space-y-2 bg-purple-600 nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Projects</a>
+      <a href="story.html">Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </header>
 
   <!-- Projects Section -->
@@ -123,6 +128,15 @@
     <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
   </footer>
 
-  <script>feather.replace();</script>
+  <!-- Scripts -->
+  <script>
+    feather.replace();
+    const toggleBtn = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    toggleBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>

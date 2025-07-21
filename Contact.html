@@ -58,33 +58,39 @@
 </head>
 <body class="text-gray-800 flex flex-col min-h-screen">
 
-  <!-- ░░ Navbar ░░ -->
-  <header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
-    <nav class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-      <div class="flex items-center space-x-3">
-        <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
-        <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
-      </div>
+ <!-- ░░ Navbar ░░ -->
+<header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse"/>
+      <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
+    </div>
 
-      <!-- desktop links -->
-      <div class="hidden md:flex space-x-5 text-base font-medium mt-4 md:mt-0 nav-links">
-        <a href="index.html"   class="text-white">Home</a>
-        <a href="about.html"   class="text-white">About</a>
-        <a href="project.html" class="text-white">Projects</a>
-        <a href="story.html"   class="text-white">Story</a>
-        <a href="contact.html" class="text-white">Contact</a>
-      </div>
+    <!-- Hamburger (mobile) -->
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none text-2xl">
+      &#9776;
+    </button>
 
-      <!-- mobile links -->
-      <div class="md:hidden flex flex-col items-end space-y-1 mt-3 text-sm nav-links">
-        <a href="index.html"   class="text-white">Home</a>
-        <a href="about.html"   class="text-white">About</a>
-        <a href="project.html" class="text-white">Projects</a>
-        <a href="story.html"   class="text-white">Story</a>
-        <a href="contact.html" class="text-white">Contact</a>
-      </div>
-    </nav>
-  </header>
+    <!-- Links -->
+    <div id="menu" class="hidden md:flex flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0 text-white text-base font-medium nav-links">
+      <a href="index.html" class="hover:text-white relative">Home</a>
+      <a href="about.html" class="hover:text-white relative">About</a>
+      <a href="project.html" class="hover:text-white relative">Projects</a>
+      <a href="story.html" class="hover:text-white relative">Story</a>
+      <a href="contact.html" class="hover:text-white relative">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Mobile dropdown menu (absolute) -->
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 flex flex-col text-white text-sm space-y-2 bg-purple-600">
+    <a href="index.html" class="hover:text-white">Home</a>
+    <a href="about.html" class="hover:text-white">About</a>
+    <a href="project.html" class="hover:text-white">Projects</a>
+    <a href="story.html" class="hover:text-white">Story</a>
+    <a href="contact.html" class="hover:text-white">Contact</a>
+  </div>
+</header>
 
   <!-- ░░ Contact ░░ -->
   <section class="flex-grow max-w-3xl mx-auto py-14 px-6 fade-in">
@@ -120,10 +126,20 @@
       </div>
     </div>
   </section>
+ 
 
   <!-- ░░ Footer ░░ -->
   <footer class="bg-gradient-to-r from-purple-700 to-pink-500 text-center py-6">
     <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
   </footer>
+  <script>
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  toggleBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
+
 </body>
 </html>
