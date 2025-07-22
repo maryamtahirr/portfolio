@@ -22,19 +22,41 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- 🌈 Gradient Navbar -->
-  <header class="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Maryam Tahir</h1>
-      <nav class="space-x-4 text-sm md:text-base">
-        <a href="index.html" class="hover:text-yellow-300">Home</a>
-        <a href="about.html" class="hover:text-yellow-300">About</a>
-        <a href="project.html" class="hover:text-yellow-300">Projects</a>
-        <a href="ai.html" class="hover:text-yellow-300 font-semibold underline">AI</a>
-        <a href="contact.html" class="hover:text-yellow-300">Contact</a>
-      </nav>
+  <!-- ░░ Responsive Navbar ░░ -->
+<header class="bg-gradient-to-r from-purple-700 to-pink-500 shadow-lg sticky top-0 z-50">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center space-x-3">
+      <img src="mypic.jpg" alt="Maryam" class="w-12 h-12 rounded-full border-2 border-white shadow-lg animate-pulse" />
+      <h1 class="text-xl font-bold text-white">Maryam Tahir</h1>
     </div>
-  </header>
+
+    <!-- Hamburger Icon -->
+    <button id="menu-toggle" class="md:hidden text-white text-3xl focus:outline-none">
+      &#9776;
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6 text-base font-medium text-white">
+      <a href="index.html" class="hover:text-gray-300">Home</a>
+      <a href="about.html" class="hover:text-gray-300">About</a>
+      <a href="project.html" class="hover:text-gray-300">Projects</a>
+      <a href="ai.html" class="hover:text-gray-300">AI</a>
+      <a href="contact.html" class="hover:text-gray-300">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 flex flex-col text-white text-sm space-y-2 bg-purple-600">
+    <a href="index.html" class="hover:text-gray-300">Home</a>
+    <a href="about.html" class="hover:text-gray-300">About</a>
+    <a href="project.html" class="hover:text-gray-300">Projects</a>
+    <a href="ai.html" class="hover:text-gray-300">AI</a>
+    <a href="contact.html" class="hover:text-gray-300">Contact</a>
+  </div>
+</header>
+
+
 
   <!-- 💡 AI Introduction -->
   <section class="py-16 px-6 md:px-20">
@@ -146,10 +168,19 @@
     </div>
   </section>
 
-  <!-- 🔻 Gradient Footer -->
-  <footer class="bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white text-center py-6 mt-10">
-    <p>&copy; 2025 Maryam Tahir. All rights reserved.</p>
+ <!-- Footer -->
+  <footer class="w-full bg-gradient-to-r from-purple-700 to-pink-500 text-center py-6">
+    <p class="text-sm text-white">&copy; 2025 Maryam Tahir. All Rights Reserved.</p>
   </footer>
+
+  <script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 </body>
 </html>
